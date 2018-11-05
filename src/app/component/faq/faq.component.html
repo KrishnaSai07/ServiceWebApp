@@ -1,0 +1,52 @@
+<div class="row">  
+ <div class="card" style="width: 17rem;"> 
+   <img class="card-img-top w-100" [src]="questLogo" alt="Card image cap" > 
+    <div class="card-body"> 
+         <h4 class="card-title">Question</h4> 
+            <p class="card-text">How can I look into my account details in the website?</p>
+                <button  class="btn btn-primary" (click)=quest1()>Find Answer</button> 
+    </div> 
+</div>
+<div class="card" style="width: 17rem;"> 
+        <img class="card-img-top w-100" [src]="questLogo" alt="Card image cap" > 
+         <div class="card-body"> 
+              <h4 class="card-title">Question</h4> 
+                 <p class="card-text">How can I update my personal details in the website ? </p>
+                     <button  class="btn btn-primary" (click)=quest2()>Find Answer</button> 
+         </div> 
+     </div>
+<div class="card" style="width: 17rem;"> 
+    <img class="card-img-top w-100" [src]="questLogo" alt="Card image cap" > 
+     <div class="card-body"> 
+          <h4 class="card-title">Question</h4> 
+             <p class="card-text">How can I upgrade my current package / look for other ones?</p>
+                 <button class="btn btn-primary" (click)=quest3()>Find Answer</button> 
+     </div> 
+ </div>
+ <div class="card" style="width: 17rem;"> 
+        <img class="card-img-top w-100" [src]="questLogo" alt="Card image cap" > 
+         <div class="card-body"> 
+              <h4 class="card-title">Question</h4> 
+                 <p class="card-text">How can I register a complaint regarding services issue?</p>
+                     <button class="btn btn-primary" (click)=quest4()>Find Answer</button> 
+         </div> 
+     </div>
+     <div class="card" style="width: 17rem;"> 
+            <img class="card-img-top w-100" [src]="questLogo" alt="Card image cap" > 
+             <div class="card-body"> 
+                  <h4 class="card-title">Question</h4> 
+                     <p class="card-text">Where can I carry out the billing procedure ?</p>
+                         <button class="btn btn-primary" (click)=quest5()>Find Answer</button> 
+             </div> 
+         </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">  
+    <div class="container"> 
+ 
+              <p class="lead">{{value}}</p> 
+               <div *ngIf=show >
+              <button class="btn btn-primary" (click)=link() >Click Here</button>
+            </div>
+    </div> 
+</div>

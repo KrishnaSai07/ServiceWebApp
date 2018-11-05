@@ -1,0 +1,45 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-sm-9 m-auto" *ngIf="!customer">
+      <h3>
+        Loading
+      </h3>
+    </div>
+    <div class="col-sm-9 m-auto" *ngFor="let c of customer">
+      <h3 class="mb-5 mt-5">
+        Your Account
+      </h3>
+      <div class="card">
+        <div class="card-header">
+          <h5 class="float-left">{{c.customId}}</h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3">
+              <img [src]="custLogo" class="img-fluid" />
+            </div>
+            <div class="col-md-9">
+
+              <p>
+                Name:   {{c.name}}
+              </p>
+              <p>
+                Address:    {{c.address}}
+              </p>
+              <p>
+                MobileNumber:   {{c.mobileNumber}}
+              </p>
+              <p>
+                 PlanId:    {{c.planId}}     
+                 <a class="nav-link" routerLink="/listPackages">
+                  Upgrade</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <h2 class="mb-5 ml-5">
+    Package List
+  </h2>
+
+  <div class="alert alert-warning" *ngIf="!plansModel || plansModel.length==0">
+     Records could not be found or loaded
+  </div>
+
+  <div class="row" *ngIf="plansModel && plansModel.length>0">
+    <div class="col-lg-2 ml-1 mb-1" *ngFor="let c of plansModel">
+        <img class="card-img-top" [src]="imgLogo" />
+        <div class="card-body">
+          <h6 class="card-title">{{c.p_Code}}</h6>
+          <p class="card-text">
+            {{c.speed}}
+            <br /> 
+            {{c.maxusage}}
+            <br />
+            {{c.mrate}}
+            <br />
+            {{c.yrate}}
+          </p>
+        </div>
+        <a class="nav-link" routerLink="/Update/{{c.p_Code}}">
+          Apply</a>
+      </div>
+    </div>
+  </div>

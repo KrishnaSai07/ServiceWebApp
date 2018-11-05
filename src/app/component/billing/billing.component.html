@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <h2 class="mb-5 ml-5">
+      Latest Bills List
+    </h2>
+  
+    <div class="alert alert-warning" *ngIf="!bills || bills.length==0">
+       Records could not be found or loaded
+    </div>
+  <!--
+    <div class="card" style="width: 17rem;" *ngFor="let c of bills"> 
+        <img class="card-img-top w-100" [src]="questLogo" alt="Card image cap" > 
+         <div class="card-body">
+         -->
+    <div class="row" *ngIf="bills && bills.length>0">
+        <div class="card" style="width: 17rem;" *ngFor="let c of bills"> 
+            <img class="card-img-top w-100" [src]="billLogo" alt="Card image cap" > 
+          <div class="card-body">
+            <h6 class="card-title">
+              <strong>Bill Id :</strong>
+              {{c.billId}}</h6>
+            <p class="card-text">
+              <strong>Due Date :</strong>
+              {{c.dueDate}}
+              <br /> 
+              <strong> Amount :  </strong>
+              {{c.amount}}
+              <br />
+              <strong> Period Of Payment : </strong>
+              {{c.pOfPayment}}
+              <br />
+              <strong>Mode of Payment : </strong>{{c.mOfPayment}}
+              <br />
+              <strong> Status : </strong>
+              <strong> {{c.status}}</strong> 
+              </p>
+              <div *ngIf="show">
+                  <Button>Pay Now</Button>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
